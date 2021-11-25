@@ -25,6 +25,14 @@ body {
   font-size: 1.4rem;
   line-height: 1.7;
 }
+html,
+body,
+p {
+  text-size-adjust: none !important;
+  -webkit-text-size-adjust: none !important;
+  -moz-text-size-adjust: none !important;
+  -ms-text-size-adjust: none !important;
+}
 h1,
 h2,
 h3 {
@@ -49,6 +57,7 @@ h2 {
   }
 }
 .btn {
+  cursor: pointer;
   outline: 0;
   border: 0;
   padding: 2rem 2.5rem;
@@ -125,12 +134,12 @@ h2 {
   display: grid;
   gap: 7rem 5rem;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 290px));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
 }
 .plan {
   font-size: 1.8rem;
   transition: all 0.3s ease;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
 }
 .card {
   background-color: var(--color-secondary-light);
@@ -178,6 +187,9 @@ h2 {
 }
 .plan:hover {
   transform: scale(1.1);
+}
+.plan .list__item {
+  font-size: 1.4rem;
 }
 @media screen and (min-width: 1024px) {
   .plan .btn--block {
@@ -244,6 +256,9 @@ h2 {
 }
 .contact-us {
   display: grid;
+  justify-content: center;
+  gap: 3rem 4rem;
+
 }
 .contact-us__form {
   height: auto;
@@ -257,11 +272,10 @@ h2 {
 .contact-us__social {
   height: 100px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .contact-us {
     grid-template-columns: 70fr 30fr;
     grid-template-areas: "address form" "map form" "icons form";
-    grid-gap: 10px;
   }
   .contact-us__form {
     grid-area: form;
@@ -301,11 +315,12 @@ h2 {
 .contact-us__icons .icon-holder {
   display: flex;
   align-items: center;
-  margin: 1rem 1rem;
+  margin-bottom: 2rem;
 }
 .icon-holder__label {
   margin-left: 2rem;
   align-items: center;
+  max-width: 250px;
 }
 @media screen and (min-width: 1024px) {
   .contact-us__icons .icon-holder {
@@ -661,7 +676,7 @@ textarea {
 }
 .intro-btn {
   margin: 50px 0;
-  width: 220px;
+  max-width: 300px;
   padding: 16px;
   background-image: linear-gradient(
     51deg,
@@ -671,6 +686,7 @@ textarea {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .intro-wrapper {
   display: flex;
@@ -683,7 +699,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 220px;
+  width: 220px;
   height: 56px;
   padding: 14px;
   cursor: pointer;
