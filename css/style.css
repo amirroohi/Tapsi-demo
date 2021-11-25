@@ -661,7 +661,7 @@ textarea {
 }
 .intro-btn {
   margin: 50px 0;
-  width: 270px;
+  width: 220px;
   padding: 16px;
   background-image: linear-gradient(
     51deg,
@@ -683,7 +683,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 220px;
+  max-width: 220px;
   height: 56px;
   padding: 14px;
   cursor: pointer;
