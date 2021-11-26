@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/font.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -109,7 +110,7 @@
         </div>
       </div>
     </section>
-    <section class="services container block block-heading">
+    <section class="services container block block-heading" data-aos="fade-up" data-aos-duration="1500">
       <h2 class="services__title">سرویس های تپسی</h2>
       <nav class="services__tabs">
         <a class="tab active" data-tab-target="nav-classic-tab">
@@ -340,7 +341,7 @@
         </div>
       </section>
     </section>
-    <section class="container block">
+    <section class="container block" data-aos="fade-up" data-aos-duration="1500">
       <section class="feature">
         <div class="feature__image">
           <img src="/asset/image/i-mac-1.png" alt="feature-image" />
@@ -373,7 +374,7 @@
         </div>
       </section>
     </section>
-    <section class="block-plan container">
+    <section class="block-plan container" data-aos="fade-up" data-aos-duration="1500">
       <div class="plan">
         <div class="card card__secondary">
           <header class="card__header">
@@ -383,7 +384,6 @@
             </span>
             <span class="plan__price">290,000</span>
             <span class="plan__billing-cycle">ماهانه/تومان</span>
-
             <span class="plan__description">سرویس ماشین های معمولی</span>
           </header>
           <div class="card__body">
@@ -450,7 +450,8 @@
         </div>
       </div>
     </section>
-    <section class="container block">
+    <section class="main-contact-us container block" data-aos="fade-up" data-aos-duration="1500">
+      <h2>نظرات شما</h2>
       <div class="contact-us">
         <div class="contact-us__social">
           <span class="icon-container">
@@ -604,5 +605,9 @@
       </div>
     </footer>
     <script src="/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
