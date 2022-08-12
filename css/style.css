@@ -867,3 +867,208 @@ textarea {
 .block-heading {
   margin-top: 8rem;
 }
+
+/* TRAVELL SECTION */
+.travell__slides {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+}
+.travell__slide {
+  /* height: 50px; */
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.travell__slide:not(:last-child) {
+  margin-left: 2rem;
+}
+.travell__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+.slide__detail {
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 32px;
+  padding: 1rem 1.5rem;
+  transform: translateY(-60px);
+  width: 80%;
+}
+.slide__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.slide__header p {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+.slide__header .badge {
+  font-size: 1.2rem;
+  padding: 0.1rem 1.2rem;
+}
+.slide__detail .slide__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.slide__icons {
+  display: flex;
+  justify-content: space-between;
+  color: #cacaca;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .travell__slides::-webkit-scrollbar {
+    display: none;
+  }
+}
+.slide__img {
+  width: 100%;
+  height: 200px;
+}
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #ececec;
+}
+.accordion__heading {
+  margin-bottom: 0;
+  font-size: 1.8rem;
+  color: #3a3a3a;
+}
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  padding: 0rem 4rem;
+}
+.accordion__content p {
+  margin: 1rem 0;
+}
+.accordion__expanded .accordion__content {
+  max-height: 100vh;
+  opacity: 1;
+  padding: 1rem 4rem;
+}
+.accordion__expanded .accordion__header i {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in;
+}
+.accordion__icon i {
+  transform: rotate(90deg);
+}
+.accordion__wrapper {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #ececec;
+  box-shadow: 0 9px 12px rgba(0, 0, 0, 0.05);
+}
+.accordion__intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  border-bottom: 2px solid #ececec;
+}
+.accordion__intro h2 {
+  font-size: 2rem;
+}
+/* AVATAR SECTION */
+.avatar-group {
+  display: flex;
+  align-items: center;
+}
+.avatar-group .avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-left: -20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.avatar:hover:not(:last-of-type) {
+  transform: translate(10px);
+}
+.hidden-avatars {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background-color: var(--color-primary-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+.slide__suggest {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-right: 3px;
+  display: inline-block;
+}
+.select-type {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.select_control {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+.select_control input[type="radio"] {
+  display: none;
+}
+.select_control:not(:last-child) {
+  margin-left: 2rem;
+}
+.select_control label {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  border-radius: 32px;
+  border: 2px solid #acacac;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.select_control label::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  box-shadow: 0 0 0 2px #ccc;
+  border-radius: 100%;
+  right: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid #fff;
+}
+.select_control input[type="radio"]:checked + label {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+.select_control input[type="radio"]:checked + label::before {
+  box-shadow: 0 0 0 2px var(--color-primary);
+  background-color: var(--color-primary);
+}
